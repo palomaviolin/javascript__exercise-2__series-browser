@@ -1,21 +1,13 @@
-* {
+.body {
   padding: 0;
   margin: 0;
-}
-
-body {
   background-color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-header {
+.header {
   background-color: white;
   width: 100%;
-}
-
-.btn-styles {
-  background-color: darkmagenta;
-  color: white;
 }
 
 .show-controls {
@@ -27,17 +19,22 @@ header {
   padding: 10px;
 }
 
-.show-input {
-  margin: 10px;
-  padding: 4px;
-  height: 24px;
-  border-bottom: 2px solid black;
+.btn-styles {
+  background-color: darkmagenta;
+  color: white;
+  font-size: 14px;
+  margin: 10px 0;
+  height: 35px;
+  padding: 0 14px;
 }
 
-#search-show {
-  margin: 10px;
-  height: 30px;
-  padding: 0 14px;
+.show-input {
+  margin: 10px 0;
+  padding: 4px;
+  height: 22px;
+  width: 300px;
+  border-bottom: 2px solid black;
+  font-size: 14px;
 }
 
 .show-result-item {
