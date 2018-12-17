@@ -50,6 +50,7 @@
   width: 300px;
   border: 2px solid gray;
   font-size: 14px;
+  outline-color: crimson;
 }
 
 .show-result-item {
