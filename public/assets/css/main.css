@@ -21,6 +21,8 @@
 
 .btn-styles {
   background-color: darkmagenta;
+  border-radius: 6px;
+  outline: none;
   color: white;
   font-size: 14px;
   margin: 10px 0;
@@ -28,23 +30,39 @@
   padding: 0 14px;
 }
 
+.btn-styles:hover {
+  background-color: salmon;
+}
+
+.btn-styles:active {
+  font-size: 16px;
+  background-color: salmon;
+  -webkit-box-shadow: 0 3px #666;
+  box-shadow: 0 3px #666;
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+}
+
 .show-input {
   margin: 10px 0;
   padding: 4px;
   height: 22px;
   width: 300px;
-  border-bottom: 2px solid black;
+  border: 2px solid gray;
   font-size: 14px;
 }
 
 .show-result-item {
   display: inline-block;
   margin: 10px;
+  padding: 20px;
   text-align: center;
   border: 3px solid palevioletred;
   background-color: lightpink;
   width: 200px;
   height: 300px;
+  color: darkmagenta;
+  font-size: 14px;
 }
 
 .show-result-item-active {
@@ -53,14 +71,8 @@
 }
 
 .show-result-item img {
-  width: 100%;
-  height: 100%;
-}
-
-li {
-  border: 3px solid palevioletred;
-  background-color: lightpink;
-  margin: 10px;
+  width: 80%;
+  height: 80%;
 }
 
 /*# sourceMappingURL=main.css.map */

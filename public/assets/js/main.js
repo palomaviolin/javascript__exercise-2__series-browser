@@ -9,6 +9,9 @@ function toggleFavorite(event) {
     // event.currentTarget nos dará el <li> que se ha seleccionado
     let toggledResultItem = event.currentTarget;
     toggledResultItem.classList.toggle('show-result-item-active');
+    // let id = show.id;
+    // localStorage.setItem(id, toggledResultItem);
+    // console.log('Cacheado resultado para ', id);
 }
 
 function searchShow() {
@@ -21,11 +24,7 @@ function searchShow() {
     fetch(`https://api.tvmaze.com/search/shows?q=${query}`)
         .then(response => response.json())
         .then(response => {
-            // Reseteamos lista de resultados
-
-            // La consola devuelve la respuesta para ver su estructura
-            console.log(response);
-
+            
             // Mostrar un texto informativo si no hay resultados
             if (response.length === 0) {
                 errorBlock.innerText = 'No se han encontrado resultados para esta búsqueda';
@@ -74,7 +73,7 @@ function searchShow() {
 
                 // Añadimos evento al elemento <li> para que se marque como destacado
                 showResultItem.addEventListener('click', toggleFavorite);
-
+            
                 // Finalmente, añadimos elemento <li> a listado
                 showResultsContainer.appendChild(showResultItem);
             }
