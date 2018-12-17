@@ -53,6 +53,10 @@
   outline-color: crimson;
 }
 
+p {
+  text-align: center;
+}
+
 .show-result-item {
   display: inline-block;
   margin: 10px;
