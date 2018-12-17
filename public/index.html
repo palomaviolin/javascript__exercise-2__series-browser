@@ -3,16 +3,28 @@
     
     <head>
         <meta charset="UTF-8">
-        <title>Adalab Web Starter Kit</title>
-        <link rel="icon" href="favicon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Sprint 2 - Evaluación final - El buscador de series</title>
+        <link rel="icon"
+        href="favicon.png" />
         <link rel="stylesheet" href="assets/css/main.css">
     </head>
     
     <body>
-        <div class="page">
-            <header class="page__header">Header</header>
-            <main class="page__main">Main</main>
-        </div>
+        <header>
+            <div class="show-controls">
+                 <h1>Buscador de series</h1>
+
+                <input id="show-input" type="text" placeholder="Introduce el nombre de una serie">
+                <button id="search-show">Buscar</button>
+            </div>
+        </header>
+        <main>
+            <p id="error"></p>
+            <ul class="show-results"></ul>
+        </main>
+        <script type="text/javascript" src="assets/js/main.js"></script>
     </body>
 
 </html>
