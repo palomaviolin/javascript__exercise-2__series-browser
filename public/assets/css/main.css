@@ -6,7 +6,6 @@
 }
 
 .header {
-  background-color: white;
   width: 100%;
 }
 
@@ -37,8 +36,8 @@
 .btn-styles:active {
   font-size: 16px;
   background-color: salmon;
-  -webkit-box-shadow: 0 3px #666;
-  box-shadow: 0 3px #666;
+  -webkit-box-shadow: 0 3px gray;
+  box-shadow: 0 3px gray;
   -webkit-transform: translateY(4px);
   transform: translateY(4px);
 }

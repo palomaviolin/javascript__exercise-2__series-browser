@@ -3,12 +3,11 @@
 .body {
   padding: 0;
   margin: 0;
-  background-color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: $background-color_body;
+  font-family: $font-family_principal;
 }
 
 .header {
-  background-color: white;
   width: 100%;
 }
 
@@ -22,10 +21,10 @@
 }
 
 .btn-styles {
-  background-color: darkmagenta;
+  background-color: $button_background-color_normal;
   border-radius: 6px;
   outline: none;
-  color: white;
+  color: $button_typography-color;
   font-size: 14px;
   margin: 10px 0;
   height: 35px;
@@ -33,49 +32,47 @@
 }
 
 .btn-styles:hover {
-  background-color: salmon;
+  background-color: $button_background-color_active;
 }
 
 .btn-styles:active {
   font-size: 16px;
-  background-color: salmon;
-  box-shadow: 0 3px #666;
+  background-color: $button_background-color_active;
+  box-shadow: 0 3px $button_shadow_active;
   transform: translateY(4px);
 }
 
-// <input>
 .show-input {
   margin: 10px 0;
   padding: 4px;
   height: 22px;
   width: 300px;
-  border: 2px solid gray;
+  border: 2px solid $border-color_input;
   font-size: 14px;
-  outline-color: crimson;
+  outline-color: $outline-color_input;
 }
 
 .text-error {
-	text-align: center;
+  text-align: center;
 }
 
-// <li>
 .show-result-item {
   margin: 10px;
   padding: 20px;
   list-style: none;
   float: left;
   text-align: center;
-  border: 3px solid palevioletred;
-  background-color: lightpink;
+  border: 3px solid $border-color_serie;
+  background-color: $background-color_serie;
   width: 200px;
   height: 300px;
-  color: darkmagenta;
+  color: $series_typography-color;
   font-size: 14px;
 }
 
 .show-result-item-active {
-  border: 3px solid purple;
-  background-color: violet;
+  border: 3px solid $border-color_serie_favourite;
+  background-color: $background-color_serie_favourite;
 }
 
 .show-result-item img {
