@@ -1,1 +1,86 @@
-.body {padding: 0;margin: 0;background-color: #fff;font-family: Arial,Helvetica,sans-serif;}.header {width: 100%;}.show-controls {margin: 0 auto;text-align: center;}.title-website {display: block;margin-left: auto;margin-right: auto;width: 50%;padding-top: 80px;padding-bottom: 25px;}.btn-styles {background-color: #8b008b;border-radius: 6px;outline: none;color: #fff;font-size: 14px;margin: 10px 0;height: 35px;padding: 0 14px;}.btn-styles:hover {background-color: salmon;}.btn-styles:active {font-size: 16px;background-color: salmon;-webkit-box-shadow: 0 3px gray;box-shadow: 0 3px gray;-webkit-transform: translateY(4px);transform: translateY(4px);}.show-input {margin: 10px 0;padding: 4px;height: 22px;width: 300px;border: 2px solid gray;font-size: 14px;outline-color: crimson;}.text-error {text-align: center;}.show-result-item {margin: 10px;padding: 20px;list-style: none;float: left;text-align: center;border: 3px solid #db7093;background-color: #ffb6c1;width: 200px;height: 300px;color: #8b008b;font-size: 14px;}.show-result-item-active {border: 3px solid purple;background-color: violet;}.show-result-item img {width: 80%;height: 80%;}
+.body {
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    width: 100%;
+}
+
+.show-controls {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.title-website {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding-top: 80px;
+    padding-bottom: 25px;
+}
+
+.btn-styles {
+    background-color: #8b008b;
+    border-radius: 6px;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    margin: 10px 0;
+    height: 35px;
+    padding: 0 14px;
+}
+
+.btn-styles:hover {
+    background-color: salmon;
+}
+
+.btn-styles:active {
+    font-size: 16px;
+    background-color: salmon;
+    -webkit-box-shadow: 0 3px gray;
+    box-shadow: 0 3px gray;
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+}
+
+.show-input {
+    margin: 10px 0;
+    padding: 4px;
+    height: 22px;
+    width: 300px;
+    border: 2px solid gray;
+    font-size: 14px;
+    outline-color: crimson;
+}
+
+.text-error {
+    text-align: center;
+}
+
+.show-result-item {
+    margin: 10px;
+    padding: 20px;
+    list-style: none;
+    float: left;
+    text-align: center;
+    border: 3px solid #db7093;
+    background-color: #ffb6c1;
+    width: 200px;
+    height: 300px;
+    color: #8b008b;
+    font-size: 14px;
+}
+
+.show-result-item-active {
+    border: 3px solid purple;
+    background-color: violet;
+}
+
+.show-result-item img {
+    width: 80%;
+    height: 80%;
+}
