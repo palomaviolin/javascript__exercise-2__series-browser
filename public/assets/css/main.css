@@ -53,14 +53,15 @@
   outline-color: crimson;
 }
 
-p {
+.text-error {
   text-align: center;
 }
 
 .show-result-item {
-  display: inline-block;
   margin: 10px;
   padding: 20px;
+  list-style: none;
+  float: left;
   text-align: center;
   border: 3px solid palevioletred;
   background-color: lightpink;

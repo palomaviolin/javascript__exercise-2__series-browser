@@ -24,7 +24,7 @@
 .btn-styles {
   background-color: darkmagenta;
   border-radius: 6px;
-  outline: none; // para quitar el reborde azul que viene por defecto.
+  outline: none;
   color: white;
   font-size: 14px;
   margin: 10px 0;
@@ -43,7 +43,7 @@
   transform: translateY(4px);
 }
 
-// input
+// <input>
 .show-input {
   margin: 10px 0;
   padding: 4px;
@@ -54,15 +54,16 @@
   outline-color: crimson;
 }
 
-p {
+.text-error {
 	text-align: center;
 }
 
 // <li>
 .show-result-item {
-  display: inline-block;
   margin: 10px;
   padding: 20px;
+  list-style: none;
+  float: left;
   text-align: center;
   border: 3px solid palevioletred;
   background-color: lightpink;
