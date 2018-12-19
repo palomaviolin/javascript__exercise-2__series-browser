@@ -5,6 +5,7 @@ let showResultsContainer = document.body.querySelector('#show-results');
 let showInputElem = document.body.querySelector('#show-input');
 let searchShowButton = document.body.querySelector('#search-show');
 let errorBlock = document.body.querySelector('#error');
+let selectOption = document.querySelector('#list');
 
 function getLocalStorageFavorites() {
   let favorites = localStorage.getItem(FAVORITES_KEY) || '[]';
@@ -54,7 +55,7 @@ function searchShow() {
   let query = showInputElem.value;
   showResultsContainer.innerHTML = '';
 
-  fetch(`https://api.tvmaze.com/search/shows?q=${query}`)
+  fetch(`https://api.tvmaze.com/search/${selectOption.value}?q=${query}`)
     .then(response => response.json())
     .then(response => {
       if (response.length === 0) {
@@ -64,57 +65,92 @@ function searchShow() {
         errorBlock.innerText = '';
       }
 
-      for (const showData of response) {
-        let show = showData.show;
-        let showName = show.name;
-        let showImage;
-        if (show.image && show.image.medium) {
-          showImage = show.image.medium;
-        } else {
-          showImage = `https://via.placeholder.com/210x295/cccccc/666666/?text=TV`;
+      if (selectOption.value === 'shows') {
+        for (const showData of response) {
+          let show = showData.show;
+          let showName = show.name;
+          let showImage;
+          if (show.image && show.image.medium) {
+            showImage = show.image.medium;
+          } else {
+            showImage = `https://via.placeholder.com/210x295/cccccc/666666/?text=TV`;
+          }
+
+          let showResultItem = document.createElement('li');
+          showResultItem.className = 'show-result-item';
+
+          if (hasFavorite(show.id)) {
+            showResultItem.classList.add('show-result-item-active');
+          }
+
+          showResultItem.dataset.showId = show.id;
+
+          let showImageElem = document.createElement('img');
+          showImageElem.src = showImage;
+          showResultItem.appendChild(showImageElem);
+
+          let showTitleElem = document.createElement('h2');
+          let showTitleText = document.createTextNode(showName);
+          showTitleElem.appendChild(showTitleText);
+          showResultItem.appendChild(showTitleElem);
+
+          showResultItem.addEventListener('click', toggleFavorite);
+
+          showResultsContainer.appendChild(showResultItem);
         }
+      } else if (selectOption.value === 'people') {
+        // Selector de serie o actores, contenido (con ayuda de la variable el inicio 'selectOption').
+        for (const showData of response) {
+          let person = showData.person;
+          let showName = person.name;
+          let showImage;
+          if (person.image && person.image.medium) {
+            showImage = person.image.medium;
+          } else {
+            showImage = `https://via.placeholder.com/210x295/cccccc/666666/?text=TV`;
+          }
 
-        let showResultItem = document.createElement('li');
-        showResultItem.className = 'show-result-item';
+          let showResultItem = document.createElement('li');
+          showResultItem.className = 'show-result-item';
 
-        if (hasFavorite(show.id)) {
-          showResultItem.classList.add('show-result-item-active');
+          if (hasFavorite(person.id)) {
+            showResultItem.classList.add('show-result-item-active');
+          }
+
+          showResultItem.dataset.showId = person.id;
+
+          let showImageElem = document.createElement('img');
+          showImageElem.src = showImage;
+          showResultItem.appendChild(showImageElem);
+
+          let showTitleElem = document.createElement('h2');
+          let showTitleText = document.createTextNode(showName);
+          showTitleElem.appendChild(showTitleText);
+          showResultItem.appendChild(showTitleElem);
+
+          showResultItem.addEventListener('click', toggleFavorite);
+
+          showResultsContainer.appendChild(showResultItem);
         }
-
-        showResultItem.dataset.showId = show.id;
-
-        let showImageElem = document.createElement('img');
-        showImageElem.src = showImage;
-        showResultItem.appendChild(showImageElem);
-
-        let showTitleElem = document.createElement('h2');
-        let showTitleText = document.createTextNode(showName);
-        showTitleElem.appendChild(showTitleText);
-        showResultItem.appendChild(showTitleElem);
-
-        showResultItem.addEventListener('click', toggleFavorite);
-
-        showResultsContainer.appendChild(showResultItem);
       }
-      incrementCounter()
+      incrementCounter();
     });
 }
 searchShowButton.addEventListener('click', searchShow);
 
+// Contador (las siguientes líneas de código + la línea 'incrementCounter();' al final de la función 'searchShow').
 
-
-// Contador (las siguientes líneas de código + la línea 'incrementCounter()' al final de la función 'searchShow').
 let counterElem = document.body.querySelector('#counter');
 let counter = 0;
 
 function init() {
-    counterElem.innerText = '';
-    searchShowButton.addEventListener('click', searchShow);
+  counterElem.innerText = '';
+  searchShowButton.addEventListener('click', searchShow);
 }
 
 function incrementCounter() {
-    counter += 1;
-    counterElem.innerText = `Número de búsquedas que has realizado: ${counter}`;
+  counter += 1;
+  counterElem.innerText = `Número de búsquedas que has realizado: ${counter}`;
 }
 
 init();
