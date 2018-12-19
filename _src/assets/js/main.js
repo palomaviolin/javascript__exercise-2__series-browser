@@ -96,7 +96,26 @@ function searchShow() {
 
         showResultsContainer.appendChild(showResultItem);
       }
+      incrementCounter();
     });
 }
-
 searchShowButton.addEventListener('click', searchShow);
+
+
+
+// Contador (las siguientes líneas de código + la línea 'incrementCounter();' al final de la función 'searchShow').
+
+let counterElem = document.body.querySelector('#counter');
+let counter = 0;
+
+function init() {
+  counterElem.innerText = '';
+  searchShowButton.addEventListener('click', searchShow);
+}
+
+function incrementCounter() {
+  counter += 1;
+  counterElem.innerText = `Número de búsquedas que has realizado: ${counter}`;
+}
+
+init();
