@@ -60,7 +60,7 @@ function searchShow() {
     .then(response => {
       if (response.length === 0) {
         errorBlock.innerText =
-          'No se han encontrado resultados para esta búsqueda';
+          'No results found for this search';
       } else {
         errorBlock.innerText = '';
       }
