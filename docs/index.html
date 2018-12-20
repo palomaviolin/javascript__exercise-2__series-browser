@@ -1,28 +1,35 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
     
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Sprint 2 - Evaluación final - El buscador de series</title>
-        <link rel="icon"
-        href="favicon.png" />
+        <title>WANTED SERIES</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+        <link rel="icon" href="favicon.png" />
         <link rel="stylesheet" href="assets/css/main.css">
     </head>
     
     <body class="body">
         <header class="header">
-            <img src="assets/images/coollogo_size50.png" alt="" class="title-website">
-            <div class="show-controls">
-                <input id="show-input" class="show-input" type="text" placeholder="Introduce el nombre de una serie">
-                <select name="list" id="list" class="select">
-                    <option value="shows">Series</option>
-                    <option value="people">Actores</option>
-                </select>
-                <button id="search-show" class="btn-styles">Buscar</button>
-                <p id="counter" class="counter"></p>
+            <audio id="myAudio" src="http://www.sousound.com/music/healing/healing_01.mp3"
+            preload="auto"></audio>
+            <div><i class="fas fa-volume-mute" onClick="togglePlay()"></i>
             </div>
+            <div>
+                <img src="assets/images/coollogo_wanted_transparent.png" alt="" class="title-website">
+                <div class="show-controls">
+                    <select name="list" id="list" class="select">
+                        <option value="shows">Series</option>
+                        <option value="people">Actors</option>
+                    </select>
+                    <input id="show-input" class="show-input" type="text" placeholder="Write here your wanted serie or actor">
+                    <button id="search-show" class="btn-styles">GO</button>
+                    <p id="counter" class="counter"></p>
+                </div>
         </header>
         <main>
             <p id="error" class="text-error"></p>

@@ -47,7 +47,7 @@ function searchShow() {
           for (const t of e) {
             let e,
               o = t.show,
-              r = o.name;
+              n = o.name;
             e =
               o.image && o.image.medium
                 ? o.image.medium
@@ -56,10 +56,10 @@ function searchShow() {
             (a.className = "show-result-item"),
               hasFavorite(o.id) && a.classList.add("show-result-item-active"),
               (a.dataset.showId = o.id);
-            let n = document.createElement("img");
-            (n.src = e), a.appendChild(n);
+            let i = document.createElement("img");
+            (i.src = e), a.appendChild(i);
             let c = document.createElement("h2"),
-              s = document.createTextNode(r);
+              s = document.createTextNode(n);
             c.appendChild(s),
               a.appendChild(c),
               a.addEventListener("click", toggleFavorite),
@@ -69,7 +69,7 @@ function searchShow() {
           for (const t of e) {
             let e,
               o = t.person,
-              r = o.name;
+              n = o.name;
             e =
               o.image && o.image.medium
                 ? o.image.medium
@@ -78,10 +78,10 @@ function searchShow() {
             (a.className = "show-result-item"),
               hasFavorite(o.id) && a.classList.add("show-result-item-active"),
               (a.dataset.showId = o.id);
-            let n = document.createElement("img");
-            (n.src = e), a.appendChild(n);
+            let i = document.createElement("img");
+            (i.src = e), a.appendChild(i);
             let c = document.createElement("h2"),
-              s = document.createTextNode(r);
+              s = document.createTextNode(n);
             c.appendChild(s),
               a.appendChild(c),
               a.addEventListener("click", toggleFavorite),
@@ -99,6 +99,25 @@ function init() {
 }
 function incrementCounter() {
   (counter += 1),
-    (counterElem.innerText = `Número de búsquedas que has realizado: ${counter}`);
+    (counterElem.innerText = `Number of searchs you have made: ${counter}`);
 }
 init();
+let myAudio = document.getElementById("myAudio"),
+  isPlaying = !1;
+function togglePlay() {
+  isPlaying ? myAudio.pause() : myAudio.play();
+}
+(myAudio.onplaying = function() {
+  isPlaying = !0;
+}),
+  (myAudio.onpause = function() {
+    isPlaying = !1;
+  });
+let iconImage = document.querySelector("i");
+function toggleIcon() {
+  iconImage.classList.contains("fa-volume-mute")
+    ? iconImage.classList.toggle("fa-volume-up")
+    : iconImage.classList.contains("fa-volume-up") &&
+      iconImage.classList.toggle("fa-volume-mute");
+}
+iconImage.addEventListener("click", toggleIcon);

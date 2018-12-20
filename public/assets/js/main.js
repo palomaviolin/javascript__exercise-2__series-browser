@@ -150,9 +150,39 @@ function init() {
 
 function incrementCounter() {
   counter += 1;
-  counterElem.innerText = `Número de búsquedas que has realizado: ${counter}`;
+  counterElem.innerText = `Number of searchs you have made: ${counter}`;
 }
 
 init();
 
+
+// Código para audio
+
+let myAudio = document.getElementById("myAudio");
+let isPlaying = false;
+
+function togglePlay() {
+  if (isPlaying) {
+    myAudio.pause();
+  } else {
+    myAudio.play();
+  }
+}
+myAudio.onplaying = function() {
+  isPlaying = true;
+}
+myAudio.onpause = function() {
+  isPlaying = false;
+}
+
+
+let iconImage = document.querySelector('i');
+function toggleIcon(){
+  if (iconImage.classList.contains('fa-volume-mute')) {
+    iconImage.classList.toggle('fa-volume-up');
+  } else if ((iconImage.classList.contains('fa-volume-up'))){
+    iconImage.classList.toggle('fa-volume-mute');
+  }
+}
+iconImage.addEventListener('click', toggleIcon);
 //# sourceMappingURL=main.js.map
