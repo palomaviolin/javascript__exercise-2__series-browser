@@ -69,6 +69,7 @@ function searchShow() {
         for (const showData of response) {
           let show = showData.show;
           let showName = show.name;
+          let showLanguage = show.language;
           let showImage;
           if (show.image && show.image.medium) {
             showImage = show.image.medium;
@@ -93,6 +94,11 @@ function searchShow() {
           let showTitleText = document.createTextNode(showName);
           showTitleElem.appendChild(showTitleText);
           showResultItem.appendChild(showTitleElem);
+
+          let showLanElem = document.createElement('p');
+          let showLanText = document.createTextNode(`Language: ${showLanguage}`);
+          showLanElem.appendChild(showLanText);
+          showResultItem.appendChild(showLanElem);
 
           showResultItem.addEventListener('click', toggleFavorite);
 
