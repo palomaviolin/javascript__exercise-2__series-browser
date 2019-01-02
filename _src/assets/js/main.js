@@ -70,6 +70,7 @@ function searchShow() {
           let show = showData.show;
           let showName = show.name;
           let showLanguage = show.language;
+          let showGenres = show.genres;
           let showImage;
           if (show.image && show.image.medium) {
             showImage = show.image.medium;
@@ -86,6 +87,11 @@ function searchShow() {
 
           showResultItem.dataset.showId = show.id;
 
+          let genresText = '';
+          for (const genre of showGenres) {
+            genresText += `${genre}, `;
+          }
+
           let showImageElem = document.createElement('img');
           showImageElem.src = showImage;
           showResultItem.appendChild(showImageElem);
@@ -99,6 +105,11 @@ function searchShow() {
           let showLanText = document.createTextNode(`Language: ${showLanguage}`);
           showLanElem.appendChild(showLanText);
           showResultItem.appendChild(showLanElem);
+
+          let showGenresElem = document.createElement('p');
+          let showGenresText = document.createTextNode(genresText);
+          showGenresElem.appendChild(showGenresText);
+          showResultItem.appendChild(showGenresElem);
 
           showResultItem.addEventListener('click', toggleFavorite);
 
