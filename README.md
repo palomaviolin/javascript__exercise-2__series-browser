@@ -1,13 +1,9 @@
-# Ejercicio de evaluación final ‒ Sprint 2 ([Adalab](https://adalab.es/))
+# JavaScript - Ejercicio 2
 
-Este repositorio contiene mi ejercicio ([@palomaviolin](https://github.com/palomaviolin)) de evaluación final del Sprint 2 de Adalab.
-
-[AQUÍ](https://palomaviolin.github.io/e-s2-evaluacion-final-palomaviolin/) podéis encontrar el link directo a la website resultante, y a continuación pondré en detalle las instrucciones que nos dieron para realizar dicho ejercicio. Finalmente añadiré una guía para usar este repo el cual contiene un web-starter-kit en node/gulp.
+[AQUÍ](https://palomaviolin.github.io/javascript__exercise-2__series-browser/) podéis encontrar el link directo a la website resultante, y a continuación pondré en detalle las instrucciones que nos dieron para realizar dicho ejercicio. Finalmente añadiré una guía para usar este repo el cual contiene un web-starter-kit en node/gulp.
 
 
 # Instrucciones dadas para realizar el ejercicio:
-
-Antes de empezar, tenéis que crear un nuevo repositorio desde GitHub Classroom usando el enlace que te hayan facilitado. Una vez creado, lo clonamos en nuestro ordenador y en la carpeta creada empezaremos a trabajar en el ejercicio.
 
 El ejercicio consiste en desarrollar una aplicación web de búsqueda de series de TV, donde demostraremos los conocimientos de JavaScript adquiridos durante el sprint. El ejercicio también tiene una parte de maquetación con HTML y Sass, os recomendamos dedicar esfuerzo a la maquetación una vez terminada la parte de JavaScript, ya que los criterios de evaluación están relacionados con esta última.
 
@@ -24,7 +20,7 @@ La aplicación de búsqueda de series consta de dos partes:
 1. Un campo de texto y un botón para buscar series por su título.
 2. Un listado de resultados de búsqueda donde aparece el cartel de la serie y el título.
 
-Para realizar la maquetación básica del ejercicio usaremos Sass y la base de gulp del [Adalab Web Starter Kit](https://github.com/Adalab/Adalab-web-starter-kit).
+Para realizar la maquetación básica del ejercicio usaremos Sass y la base de gulp del [Web Starter Kit](https://github.com/Adalab/Adalab-web-starter-kit).
 
 ## 2. Búsqueda
 
